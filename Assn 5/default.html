@@ -36,9 +36,16 @@
 					<h2>Upload files in here...</h2>
 				</div>
 
+				<!-- Progress bar -->
+				<progress id="progress-bar" max=100 value=0></progress>
+
 				<div id="drop-area">
   					<form class="my-form">
     					<p>Upload multiple files with the file dialog or by dragging and dropping images onto the dashed region</p>
+
+    					<!-- Progress bar -->
+						<progress id="progress-bar" max=100 value=0></progress>
+						
     					<input type="file" id="fileElem" multiple accept="image/*" onchange="handleFiles(this.files)">
     					<label class="button" for="fileElem">Select some files</label>
   					</form>
