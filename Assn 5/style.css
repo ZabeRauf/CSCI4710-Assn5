@@ -1,175 +1,150 @@
-/* 	Vancouver green: #2fb228;
-	Vancouver white: #fff;
-	Vancouver blue:  #140FAA;
+/*
+
+
+	blue-gray 			: #34495e;
+	blue-gray-darken 	: #2c3e50;
+	light-blue          : #d3e9f7;
+	blue 				: #3498db;
+	blue-darken 		: #2980b9;
+	green 				: #1abc9c;
+	green-darken 		: #16a085;
+
 */
 
-html, body, h1, h2, h3, ul, li, p, a {
-	
-	padding: 0;
-	border: 0;
-	margin: 0;
+* {
+  margin: 0;
+  padding: 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  
 }
-
-ul {
-	list-style-type: none;
-	margin:0;
-	padding: 0;
-	overflow: hidden;
-	background-color: #140FAA;
+.container {
+	padding: 10px 0 10px 22px;
 }
-
-p {
-  color: #555555;
-  margin: 0 0 20px 0;
-  padding-left: 10px;
-}
-
-li {
-	float: left;
-}
-
-li a {
-	display: block;
-	color: #fff;
-	text-align: center;
-	padding: 14px 16px;
-	text-decoration: none;
-}
-
-li a:hover:not(.active) {
-	background-color: #F8EEE7;
-	color: #94618E;
-}
-
-h1 {
-	color: #2fb228;
-	margin: 0 0 10px 0;
-}
-
 body {
-  padding: 0px;
-  background: #5f5f5f url(images/always_grey_@2X.png) center center repeat;
+  text-align: center;
+  
 }
 
-li a.active {
-	background-color: #fff;
-	color: #94618E;
+
+.container {
+	height: 60vh;
+}
+.verify {
+	height: 160vh;
 }
 
-img {
-	width: 60%;
-	height: 60%;
-	padding-top: 10px;
+.data-field-text-box {
+	display:flex;
+	justify-content: flex-start;
+	background-color: #FFF;
+	border-radius: 5px;
+	height:80%;
+	margin: 10px 0;
+	padding: 10px;
+}
+.data-field-text-box ul {
+	list-style: none;
 }
 
-img.displayed {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-.header {
-	padding: 10px 10px 20px 10px;
+#data-field-list {
+	width: 100%;
 	text-align: left;
-  	background: #140FAA url() center left repeat;
+}
+#meta-data-text-box {
+	display: flex;
+	flex-direction: column;
+}
+.data-field-metadata-list li  {
+	list-style: none;
+    width: 100%;
+	font-size: 12px;
+	color: #2c3e50;
+	width: 100%;
+	text-align: left;
+	line-height: 14px;
+}
+.data-field-list-item {
+	list-style: none;
+    padding: 5px;
+    width: 100%;
+	font-size:12px;
+	color: #2c3e50;
+	width: 100%;
+
 }
 
-.body-content {
-	padding: 20px 20px 20px 20px;
-	width: 500px;
-	border: 1px solid #dddddd;
-	margin: 30px auto 0 auto;
-  	background: #5f5f5f url(images/sayagata-400px.png) center center repeat;
+.data-field-list-item:hover {
+	border-radius: 2px;
+	background-color: #2c3e50;
+	font-size: 12px;
+	color: #fff;
+	cursor: pointer;
 }
 
-/* Modal stuff */
 
-.modal {
-	display: none; /* Hidden by default */
-  	position: fixed; /* Stay in place */
-  	z-index: 1; /* Sit on top */
-  	left: 0;
-  	top: 0;
-  	width: 100%; /* Full width */
-  	height: 100%; /* Full height */
-  	overflow: auto; /* Enable scroll if needed */
-  	background-color: rgb(0,0,0); /* Fallback color */
-  	background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
 
-/* Modal Content/Box */
-.modal-content {
-  	background-color: #fefefe;
-  	margin: 15% auto; /* 15% from the top and centered */
-  	padding: 2px;
-  	border: 1px solid #888;
-  	width: 80%; /* Could be more or less, depending on screen size */
+
+/*
+	VERIFY PAGE
+*/
+
+.verify-main-section {
+	height:50%;
+	margin:-40px 20px -50px 0px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+    justify-content: center;
 }
 
-/* The Close Button */
-.close {
-  	color: #aaa;
-  	float: right;
-  	font-size: 28px;
-  	font-weight: bold;
+
+.verify-container {
+	width:95%;
+	height:40%;
+	background-color: #DFF0D8 ;
+	border-radius: 25px;
+	padding:8px;
+	margin-bottom: -50px;
+	margin-top: -80px;
+	color: #2c3e50;
+	display:flex;
+	justify-content: space-between;
 }
 
-.close:hover,
-.close:focus {
-  	color: black;
-  	text-decoration: none;
-  	cursor: pointer;
+.verify-final-button {
+	width:100%;
+	display:flex;
+	justify-content: flex-end;
+	padding: 10px 150px;
 }
 
-/* Modal Header */
-.modal-header {
-  padding: 2px 16px;
-  background-color: #2fb228;
-  color: white;
+.verify-column {
+	width: 100%;
 }
 
-/* Modal Body */
-.modal-body {padding: 2px 16px;}
-
-/* File upload area styles ============================ */
-#drop-area {
-  border: 2px dashed #ccc;
-  border-radius: 20px;
-  width: 480px;
-  font-family: sans-serif;
-  margin: 100px auto;
-  padding: 20px;
-}
-#drop-area.highlight {
-  border-color: purple;
-}
-p {
-  margin-top: 0;
-}
-.my-form {
-  margin-bottom: 10px;
-}
-#gallery {
-  margin-top: 10px;
-}
-#gallery img {
-  width: 150px;
-  margin-bottom: 10px;
-  margin-right: 10px;
-  vertical-align: middle;
-}
-.button {
-  display: inline-block;
-  padding: 10px;
-  background: #ccc;
-  cursor: pointer;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-}
-.button:hover {
-  background: #ddd;
-}
-#fileElem {
-  display: none;
+.verify-left-column {
+	width: 33%;
 }
 
+.verify-middle-column {
+	width: 33%;
+}
+.verify-right-column {
+	width: 33%;
+}
+
+#data-field-list1 {
+	width: 100%;
+	text-align: left;
+}
+
+
+
+#metadata-field {
+	display:flex;
+	flex-direction:column;
+	align-items: flex-start;
+}

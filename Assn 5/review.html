@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>HYDRO QUALITY</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./Contents/bootstrap.min.css">
+    <script src="./Scripts/jquery.min.js.download"></script>
+    <script src="./Scripts/canvasjs.min.js"></script>
+    <script src="./Scripts/bootstrap.min.js.download"></script>
+    
+
+
+        <script>
+            window.onload = function () {
+
+var chart = new CanvasJS.Chart("chartContainer", { animationEnabled: true,  theme: "light2",
+        title:{
+                text: "Data Values"
+        },
+        axisY:{
+                includeZero: false
+        },
+        data: [{
+                type: "line",
+            dataPoints: [
+                {y: 450 },
+                {y: 414},
+                { y: 520 },
+                { y: 460 },
+                {y: 450 },
+                {y: 500 },
+                
+        ]
+}]
+});
+chart.render();
+
+}
+    </script>
+
+
+    
+    <style type="text/css">
+        .active {
+            background: #D8BFD8  !important;
+        }
+
+        .header1 {
+            text-align: center;
+            font-size: 2em;
+            color: green;
+            margin: 10px;
+        }
+
+        .name {
+            color: blue;
+        }
+
+        .nav li {
+            color: #FFF !important;
+            padding-right: 5px;
+            font-size: 1.8em !important;
+        }
+        
+        .aside{
+            text-align:right;
+            font-size:em;
+        }
+        .boxed {
+            border: 1px solid green;
+        }
+       
+    </style>
+
+</head>
+<body>
+    <header class="header1"> HYDRO<span class="name">QUALITY</span></header>
+    <nav class="navbar navbar-expand-sm bg-success navbar-dark">
+        <div class="container">
+            <div class="navbar-header">
+                <ul class="nav navbar-nav ">
+                    <li><a href="default.html">Upload ></a></li>
+                    <li><a href="Verify.html">Verify ></a></li>
+                    <li><a href="configure.html"> Configure ></a></li>
+                    <li><a href="runtests.html"> Run Tests ></a></li>
+                    <li class="active"><a href="review.html"> Review</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="box" align="left">
+        <div class="panel panel-default">
+            <div class="panel-heading"><strong><center> Data Value 5 </center></strong> </div>
+            <div class="panel-body">
+
+                <body>
+                    <div id="chartContainer" align="left" style="height: 100px; width: 40%;"></div>
+
+                </body>
+                </div>
+                
+
+                <div class="text-left">
+                    <button type="button" id="loading" class="btn btn-success">< Prior Data column </button>
+
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <button type="button" align="center " id="loading" class="btn btn-success">Next Data column > </button>
+                
+                </div>
+                
+        </div>
+        </div>
+    </div> 
+    
+    </div><!-- /container -->
+
+    
+</body>
