@@ -1,5 +1,8 @@
 /*
 
+	Vancouver green     : #2fb228;
+	Vancouver white     : #fff;
+	Vancouver blue      : #140FAA;
 
 	blue-gray 			: #34495e;
 	blue-gray-darken 	: #2c3e50;
@@ -10,6 +13,10 @@
 	green-darken 		: #16a085;
 
 */
+
+.altHeader {
+  color: #140FAA;
+}
 
 * {
   margin: 0;
