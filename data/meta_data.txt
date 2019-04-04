@@ -1,0 +1,3 @@
+Name : TempValue 
+TempLower : 69 
+TempUpper : 420
